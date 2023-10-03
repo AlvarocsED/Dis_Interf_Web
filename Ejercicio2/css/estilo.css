@@ -1,10 +1,26 @@
 *{
     box-sizing: border-box;
 }
-.div{
+.div1{
     float: right;
     background-color: pink;
     inline-size: auto;
     width: 700px;
     margin: 10px;
+    padding: 50px;
+    inline-size: auto;
+}
+.div2{
+    float: left;
+    background-color: blue;
+    width: 700px;
+    padding: 50px;
+    inline-size: auto;
+}
+.div3{
+    float: left;
+    background-color: red;
+    width: 700px;
+    padding: 50px;
+    inline-size: auto;
 }

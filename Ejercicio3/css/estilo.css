@@ -4,15 +4,16 @@
 .div1{
     float: right;
     background-color: pink;
-    width: 700px;
+    width: 2000px;
     padding: 50px;
     margin: 10px;
     inline-size: auto;
+    height: 700px;
 }
 .div2{
     float: left;
-    background-color: blue;
+    background-color: orange;
     width: 700px;
     padding: 50px;
-    inline-size: auto;
-}
+    margin: 10px;
+    }
