@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+.div1{
+    float: right;
+    background-color: pink;
+    width: 700px;
+    padding: 50px;
+    margin: 10px;
+    inline-size: auto;
+}
+.div2{
+    float: left;
+    background-color: blue;
+    width: 700px;
+    padding: 50px;
+    inline-size: auto;
+}

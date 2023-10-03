@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+.div{
+    float: right;
+    background-color: pink;
+    inline-size: auto;
+    width: 700px;
+    margin: 10px;
+}
