@@ -109,34 +109,33 @@ div {
   clear: both;
   display: table;
 }
-.container {
-    width: 1024px;
-    margin: 0 auto;
+.header {
+    overflow: hidden;
   }
 
   .logo {
-    float: right;
+    float: left;
   }
 
   .navigation {
-    float: left;
+    float: right;
   }
 
-  .sidebar {
-    float: left;
-    width: 25%;
-    height: 300px;
+  .main-content {
+    overflow: hidden;
   }
 
-  .sub-content {
+  .post {
+    overflow: hidden;
+  }
+
+  .image {
+    float: left;
+    width: 20%;
+    height: 150px;
+  }
+
+  .post_excerpt {
     float: right;
     width: 70%;
-    height: 140px;
-    margin-bottom: 20px;
-  }
-
-  .sub-content-2 {
-    float: right;
-    width: 70%;
-    height: 140px;
   }

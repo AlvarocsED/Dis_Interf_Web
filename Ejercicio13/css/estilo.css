@@ -114,29 +114,24 @@ div {
     margin: 0 auto;
   }
 
-  .logo {
-    float: right;
-  }
-
-  .navigation {
-    float: left;
-  }
-
   .sidebar {
     float: left;
-    width: 25%;
+    width: 33.3333%;
+    height: 300px;
+  }
+
+  .main-content {
+    float: left;
+    width: 33.3333%;
     height: 300px;
   }
 
   .sub-content {
-    float: right;
-    width: 70%;
-    height: 140px;
-    margin-bottom: 20px;
+    float: left;
+    width: 33.3333%;
+    height: 300px;
   }
 
-  .sub-content-2 {
-    float: right;
-    width: 70%;
-    height: 140px;
+  .footer {
+    clear: left;
   }

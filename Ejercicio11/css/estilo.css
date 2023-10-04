@@ -1,4 +1,34 @@
-h1,
+.container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    float: left;
+  }
+
+  .navigation {
+    width: 70%;
+    float: right;
+  }
+
+  .sidebar {
+    float: left;
+    width: 25%;
+    height: 300px;
+  }
+
+  .sub-content {
+    float: right;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .sub-content-2 {
+    float: right;
+    width: 70%;
+  }
+  h1,
 h2,
 h3,
 h4,
@@ -109,34 +139,3 @@ div {
   clear: both;
   display: table;
 }
-.container {
-    width: 1024px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    float: right;
-  }
-
-  .navigation {
-    float: left;
-  }
-
-  .sidebar {
-    float: left;
-    width: 25%;
-    height: 300px;
-  }
-
-  .sub-content {
-    float: right;
-    width: 70%;
-    height: 140px;
-    margin-bottom: 20px;
-  }
-
-  .sub-content-2 {
-    float: right;
-    width: 70%;
-    height: 140px;
-  }
