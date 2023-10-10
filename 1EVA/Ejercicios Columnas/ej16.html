@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios columnas. Ej. 16</title>
+  <link rel="stylesheet" href="ej-16.css">
+  <link rel="stylesheet" href="columnas.css">
+
+  <style>
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Estilos para este ejercicio concreto */
+    /* To Do List */
+    .todolist {
+      /* width: 50%; */
+      /* padding: 15px; */
+      margin: 0 auto;
+      border: 1px solid black;
+      background-color: white;
+    }
+
+    /* Individual Todo */
+    .todo {
+      /* overflow: hidden; */
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    /* Priority icon dot */
+    .icon {
+      float: left;
+      margin: 0 10px;
+    }
+
+    /* Info of the todo, title and date */
+    .todo-info {
+      float: left;
+      margin: 10px;
+    }
+
+    /* Title */
+    .todo-title {
+      font-size: 24pt;
+    }
+
+    /* Date */
+    .todo-date {
+      font-size: 12pt;
+    }
+
+    /* Checkboxes */
+    .checkbox-right {
+      float: right;
+      margin: 35px 35px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- To Do list -->
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="todolist">
+
+          <!-- To Do Item -->
+          <div class="todo clearfix">
+            <div class="icon urgent">&#9679;</div>
+            <div class="todo-info">
+              <div class="todo-title">Pay Rent</div>
+              <div class="todo-date">April 1</div>
+            </div>
+            <div class="check">
+              <input type="checkbox" class="checkbox-right" value="None" name="check">
+              <label for="check"></label>
+            </div>
+          </div>
+
+          <!-- To Do Item -->
+          <div class="todo clearfix">
+            <div class="icon urgent">&#9679;</div>
+            <div class="todo-info">
+              <div class="todo-title">Pay taxes</div>
+              <div class="todo-date">April 14</div>
+            </div>
+            <div class="check">
+              <input type="checkbox" class="checkbox-right" value="None" name="check">
+              <label for="check"></label>
+            </div>
+          </div>
+
+          <!-- To Do Item -->
+          <div class="todo clearfix">
+            <div class="icon medium">&#9679;</div>
+            <div class="todo-info">
+              <div class="todo-title">Do floats homework</div>
+              <div class="todo-date">Monday, April 21</div>
+            </div>
+            <div class="check">
+              <input type="checkbox" class="checkbox-right" value="None" name="check">
+              <label for="check"></label>
+            </div>
+          </div>
+
+          <!-- To Do Item -->
+          <div class="todo clearfix">
+            <div class="icon medium">&#9679;</div>
+            <div class="todo-info">
+              <div class="todo-title">Get groceries</div>
+              <div class="todo-date">Friday, April 18</div>
+            </div>
+            <div class="check">
+              <input type="checkbox" class="checkbox-right" value="None" name="check">
+              <label for="check"></label>
+            </div>
+          </div>
+
+          <!-- To Do Item -->
+          <div class="todo clearfix">
+            <div class="icon">&#9679;</div>
+            <div class="todo-info">
+              <div class="todo-title">Get a haircut</div>
+              <div class="todo-date">Friday, April 18</div>
+            </div>
+            <div class="check">
+              <input type="checkbox" class="checkbox-right" value="None" name="check">
+              <label for="check"></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p><strong>Explicación:</strong></p>
+  <p>Metemos la clase <code>todolist</code> en un <code>col-6</code> para darle un 50% de anchura. Además, metemos antes un <code>col-3</code> para desplazarlo y simular el <code>margin:0 auto</code>, que ahora nos sobra.</p>
+  <p>No hace falta modificar nada dentro de la clase <code>todo</code>. Aunque hay elementos flotantes, ninguno tiene definido una anchura concreta, por lo que la distribución en columnas es innecesaria.</p>
+  <p>Lo que sí podemos hacer es eliminar <code>overflox: hidden</code> en la clase <code>todo</code> y añadir la clase <code>clearfix</code>. Podrías decir, con razón, que en vez de usar la clase <code>clearfix</code> podríamos usar <code>row</code>. Funcionaría, dado que son equivalentes, pero sus valores semánticos son distintos. La clase <code>cleafix</code> se usa en estas situaciones donde los elementos flotantes no tienen anchura definida, mientras que la clase <code>row</code> se usa cuando vamos a definir un layout en columnas.</p>
+
+</body>
+
+</html>

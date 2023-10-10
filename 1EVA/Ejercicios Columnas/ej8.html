@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios columnas. Ej. 9</title>
+  <link rel="stylesheet" href="columnas.css">
+
+  <style>
+    [class*="col-"] {
+      padding: 0px;
+    }
+
+    #header {
+      background-color: #333;
+      overflow: auto;
+    }
+
+    #header a {
+      padding: 14px 18px;
+      color: white;
+      text-decoration: none;
+    }
+
+    #header a:hover {
+      background-color: red;
+    }
+
+    .f-left {
+      float: left;
+    }
+
+    .f-right {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row" id="header">
+    <div class="col-9">
+      <a class="f-left" href="#">Inicio</a>
+      <a class="f-left" href="#">Nosotros</a>
+      <a class="f-left" href="#">Productos</a>
+      <a class="f-left" href="#">Contacto</a>
+    </div>
+    <div class="col-3"><a class="f-right" href="#">Salir</a></div>
+  </div>
+</body>
+
+</html>
