@@ -1,25 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <link rel="stylesheet" href="css/columnas.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/pr1-index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulacro Práctica. Inicio</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pr1-index.css">
+  <link rel="stylesheet" href="css/columnas.css">
 </head>
+
 <body>
-    <div>
-    <header id="header-logo-container"></header>
-    <nav>
-        <a name="Incio"></a>
-        <ul>
-            <li><a href="#Inicio">Incio</a></li>
-            <li><a href="#">Producto</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
+
+  <div id="container">
+
+    <div id="header-logo-container"></div>
+
+    <nav class="clearfix">
+      <a href="index.html" class="float-left">Inicio</a>
+      <a href="#" class="float-left">Productos</a>
+      <a href="#" class="float-left">Servicios</a>
+      <a href="#" class="float-left">Precios</a>
+      <a href="contacto.html" class="float-right">Contacto</a>
     </nav>
-    </div>  
+
+    <div class="row">
+
+      <div class="col-t-3">
+        <aside>
+          <a class="titular" href="#">
+            <img src="img/gatito1.png" alt="Gatito">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </a>
+
+          <a class="titular" href="#">
+            <img src="img/gatito2.png" alt="Gatito">
+            <h3>Dolorum vero quo quis commodi repudiandae</h3>
+          </a>
+
+          <a class="titular" href="#">
+            <img src="img/gatito3.png" alt="Gatito">
+            <h3>Iste deleniti sint dicta omnis velit adipisci eum voluptates perspiciatis itaque</h3>
+          </a>
+        </aside>
+      </div><!-- col-t-3 -->
+
+      <div class="col-t-9">
+
+        <main>
+
+          <div class="row">
+            <div class="col-e-8">
+              <div class="height-200 bg-yellowgreen">
+                Voy a <span class="span1">aprobar el examen<span class="tooltip">¡Ja! Ni en sueños</span></span> de DIW!!
+              </div>
+            </div>
+            <div class="col-e-4">
+              <div class="height-200 bg-lightcoral">2</div>
+            </div>
+          </div><!-- row -->
+
+          <div class="row">
+            <div class="col-e-3 col-t-4">
+              <div class="height-200 bg-lightblue">3</div>
+            </div>
+
+            <div class="col-e-6 col-t-8">
+              <div class="height-200 bg-lightpink">4</div>
+            </div>
+
+            <div class="col-e-3 col-t-12">
+              <div class="height-200 bg-lightseagreen">5</div>
+            </div>
+          </div><!-- row -->
+
+        </main>
+
+      </div><!-- col-t-9 -->
+
+    </div><!-- row -->
+
+  </div><!-- #container -->
+
+  <a id="totop" href="#top">
+    <img src="img/arrow-up.png" alt="To top">
+  </a>
+
 </body>
+
 </html>
