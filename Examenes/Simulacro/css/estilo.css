@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    background-color: #d3d3d3;
+    text-align: center;
+    padding: 50px;
+}
+.articulo-homer{
+    background-color: #d3ffd3;
+}
+.imagen-izquierda{
+    float: left;
+}
+.tflotante-derecha{
+    float: right;
+}
+.cajafooterhola{
+    background-color: lightcoral;
+    padding: 25px;
+}
+.cajafooteradios{
+    background-color: lightgreen;
+    padding: 25px;
+}
