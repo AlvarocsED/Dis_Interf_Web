@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F5FE linear-gradient(to bottom, #F2F5FE, #d7e4f7) /*url("img/fondo.gif") 0 0 repeat-x*/
+  background: #F2F5FE linear-gradient(to bottom, #F2F5FE, #d7e4f7); /*url("img/fondo.gif") 0 0 repeat-x*/
   font: 70%/160% "verdana", sans-serif;
   color: #192666;
 }
@@ -94,14 +94,14 @@ ol {
   width: 200px;
   margin: 15px 0 0 0;
   padding: 0;
-  background: #CEDBF9 linear-gradient(to bottom, #CEDBF9, #a5b8f8) /*url("img/fondo_columna.gif") no-repeat*/
+  background: #CEDBF9 linear-gradient(to bottom, #CEDBF9, #a5b8f8); /*url("img/fondo_columna.gif") no-repeat*/
 }
 
 #pie {
   clear: both;
   height: 60px;
   margin-bottom: 50px;
-  background: linear-gradient(tp both, #6685CC) /*url("img/fondo_pie.jpg") no-repeat*/
+  background: linear-gradient(tp both, #6685CC); /*url("img/fondo_pie.jpg") no-repeat*/
   color: #6685CC;
   position: relative;
 }
@@ -183,7 +183,7 @@ ol {
   clear: both;
   margin: 0;
   padding: 20px;
-  background: url("img/fondo_articulo.jpg") no-repeat;
+  background: linear-gradient(to bottom, #DEE5FD, #ffffff); /*url("img/fondo_articulo.jpg") no-repeat*/
 }
 
 #contenido .articulo img {

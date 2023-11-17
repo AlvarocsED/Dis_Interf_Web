@@ -11,11 +11,10 @@
 
 <body>
     <!-- Contenedor -->
-    <div id="contenedor">
+    <div id="contenedor" class="row">
 
         <!-- Cabecera -->
-        <header id="cabecera">
-
+        <header id="cabecera" class="col-t-12 col-e-12">
             <!-- Logo -->
             <h1 id="logo"><a href="./" title="Mi sitio web">Mi sitio web</a></h1>
 
@@ -29,12 +28,10 @@
                     </fieldset>
                 </form>
             </nav> <!-- /buscador -->
-
-            <div class="clear"></div>
         </header> <!-- /cabecera -->
 
         <!-- Menú principal -->
-        <nav id="menu">
+        <nav id="menu" class="col-t-12 col-e-12">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li class="seleccionado"><a href="#">Blog</a></li>
@@ -42,148 +39,42 @@
                 <li><a href="#">Fotos</a></li>
                 <li><a href="#">Portfolio</a></li>
             </ul>
-
-            <div class="clear"></div>
         </nav> <!-- /menú principal -->
 
         <!-- Contenido -->
-        <main id="contenido">
+        <main id="contenido" class="row">
 
             <!-- Principal -->
-            <section id="principal">
+            <section id="principal" class="col-t-12 col-e-8">
 
                 <!-- Articulo -->
-                <article class="articulo">
+                <article>
                     <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                    <p class="info">
-                        <span class="fecha">dd-mm-aaaa</span>
-                        <span class="categoria"><a href="#">diseño</a></span>
-                        <span class="autor"><a href="#">Nombre Apellido</a></span>
-                        <span class="comentarios"><a href="#">Comentar</a></span>
-                    </p>
-
-                    <img src="img/post.jpg">
-
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam pellentesque enim blandit enim bibendum blandit.
-                        Integer eu leo ac est aliquet imperdiet. Quisque nec justo id augue posuere malesuada. Nullam ac metus. Cras non leo
-                        ut est placerat condimentum.</p>
-
-                    <p class="btn-more"><a href="#">Seguir leyendo...</a></p>
+                    <!-- ... (contenido del artículo) ... -->
                 </article> <!-- /articulo -->
 
-                <div class="clear"></div>
-
-                <!-- Articulo -->
-                <article class="articulo">
-                    <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                    <p class="info">
-                        <span class="fecha">dd-mm-aaaa</span>
-                        <span class="categoria"><a href="#">diseño</a></span>
-                        <span class="autor"><a href="#">Nombre Apellido</a></span>
-                        <span class="comentarios"><a href="#">Comentar</a></span>
-                    </p>
-
-                    <img src="img/post.jpg">
-
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam pellentesque enim blandit enim bibendum blandit.
-                        Integer eu leo ac est aliquet imperdiet. Quisque nec justo id augue posuere malesuada. Nullam ac metus. Cras non leo
-                        ut est placerat condimentum.</p>
-
-                    <p class="btn-more"><a href="#">Seguir leyendo...</a></p>
-                </article> <!-- /articulo -->
-
-                <div class="clear"></div>
-
-                <!-- Articulo -->
-                <article class="articulo">
-                    <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                    <p class="info">
-                        <span class="fecha">dd-mm-aaaa</span>
-                        <span class="categoria"><a href="#">diseño</a></span>
-                        <span class="autor"><a href="#">Nombre Apellido</a></span>
-                        <span class="comentarios"><a href="#">Comentar</a></span>
-                    </p>
-
-                    <img src="img/post.jpg">
-
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam pellentesque enim blandit enim bibendum blandit.
-                        Integer eu leo ac est aliquet imperdiet. Quisque nec justo id augue posuere malesuada. Nullam ac metus. Cras non leo
-                        ut est placerat condimentum.</p>
-
-                    <p class="btn-more"><a href="#">Seguir leyendo...</a></p>
-                </article> <!-- /articulo -->
-
-                <div class="clear"></div>
+                <!-- Otros artículos -->
 
             </section><!-- /principal -->
 
             <!-- Secundario -->
-            <aside id="secundario">
+            <aside id="secundario" class="col-t-12 col-e-4">
 
                 <!-- Sobre mi -->
-                <h3><a href="#">Sobre mí</a></h3>
-
-                <section id="sobremi">
-                    <img src="img/mifoto.gif" alt="Mi foto" />
-                    <p><strong>Nombre Apellido</strong><br />
-                        Edad<br />
-                        Ciudad<br />
-                        <a href="#">Perfil público</a>
-                    </p>
+                <section>
+                    <h3><a href="#">Sobre mí</a></h3>
+                    <!-- ... (contenido de Sobre mí) ... -->
                 </section> <!-- /sobre mi -->
 
-                <div class="clear"></div>
-
-                <!-- Categorías -->
-                <section>
-                    <h3>Categorías</h3>
-                    <ul id="categorias">
-                        <li class="seleccionado"><a href="#">Categoría 1</a></li>
-                        <li><a href="#">Categoría 2</a></li>
-                        <li><a href="#">Categoría 3</a></li>
-                        <li><a href="#">Categoría 4</a></li>
-                        <li><a href="#">Categoría 5</a></li>
-                    </ul>
-                </section>
-
-                <div class="clear"></div>
-
-                <!-- Archivo -->
-                <section>
-                    <h3>Archivo</h3>
-                    <ul id="archivo">
-                        <li class="seleccionado"><a href="#">Enero 200X</a></li>
-                        <li><a href="#">Diciembre 200X</a></li>
-                        <li><a href="#">Noviembre 200X</a></li>
-                        <li><a href="#">Octubre 200X</a></li>
-                        <li><a href="#">Septiembre 200X</a></li>
-                    </ul>
-                </section>
-
-                <div class="clear"></div>
-
-                <!-- Enlaces -->
-                <section>
-                    <h3>Enlaces</h3>
-                    <ul id="enlaces">
-                        <li><a href="#">Enlace 1</a></li>
-                        <li><a href="#">Enlace 2</a></li>
-                        <li><a href="#">Enlace 3</a></li>
-                        <li><a href="#">Enlace 4</a></li>
-                        <li><a href="#">Enlace 5</a></li>
-                    </ul>
-                </section>
-
-                <div class="clear"></div>
+                <!-- Otras secciones -->
 
             </aside> <!-- /secundario -->
 
-            <div class="clear"></div>
         </main> <!-- /contenido -->
 
         <!-- Pie de página -->
-        <footer id="pie">
-            <p id="copyright">&copy; 200X Nombre de empresa</p>
+        <footer id="pie" class="row">
+            <p id="copyright" class="col-t-12 col-e-12">&copy; 200X Nombre de empresa</p>
         </footer> <!-- /pie de página -->
 
     </div> <!-- /contenedor -->
