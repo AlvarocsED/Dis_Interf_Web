@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F5FE linear-gradient(to bottom, #F2F5FE, #d7e4f7); /*url("img/fondo.gif") 0 0 repeat-x*/
+  background: #F2F5FE linear-gradient(90deg, rgba(60,69,170,1) 0%, rgba(164,226,239,1) 30%); /*url("img/fondo.gif") 0 0 repeat-x*/
   font: 70%/160% "verdana", sans-serif;
   color: #192666;
 }
