@@ -46,4 +46,6 @@
   
   .bg-clr-lightgoldenrodyellow {
     background-color: lightgoldenrodyellow;
+    text-align: center;
+    width: 25%;
   }
