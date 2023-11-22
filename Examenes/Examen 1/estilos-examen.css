@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+  .comprar{
+    background-color: white;
+    border-radius: 50%;
+    border-color: black;
+  }
+  .logo-microsoft{
+    height: 30px;
+  }
+  .comprar:hover{
+     color: white;
+  }
+  .logo{
+    width: 50%;
+    float: left;
+  }
+  .portada-texto{
+    width: 50%;
+    padding: 20px;
+    position: relative;
+  }
+  .card {
+    padding: 5px 20px;
+    border-radius: 15px;
+  }
+  
+  .bg-clr-lightblue {
+    background-color: lightblue;
+    text-align: center;
+    width: 25%;
+  }
+  
+  .bg-clr-lightcoral {
+    background-color: lightcoral;
+    text-align: center;
+    width: 25%;
+  }
+  
+  .bg-clr-lightcyan {
+    background-color: lightcyan;
+    text-align: center;
+    width: 25%;
+  }
+  
+  .bg-clr-lightgoldenrodyellow {
+    background-color: lightgoldenrodyellow;
+  }
