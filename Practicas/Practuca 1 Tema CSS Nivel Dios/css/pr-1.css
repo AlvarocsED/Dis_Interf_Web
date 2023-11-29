@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F5FE linear-gradient(90deg, rgba(60,69,170,1) 0%, rgba(164,226,239,1) 30%); /*url("img/fondo.gif") 0 0 repeat-x*/
+  background: #F2F5FE, linear-gradient(to bottom, #96aff5 0%,#a1b8f6 18%,#dfe6fc 74%,#f2f5fe 100%); /*url("img/fondo.gif") 0 0 repeat-x*/
   font: 70%/160% "verdana", sans-serif;
   color: #192666;
 }
@@ -94,14 +94,14 @@ ol {
   width: 200px;
   margin: 15px 0 0 0;
   padding: 0;
-  background: #CEDBF9 linear-gradient(to bottom, #CEDBF9, #a5b8f8); /*url("img/fondo_columna.gif") no-repeat*/
+  background: #CEDBF9, linear-gradient(to bottom, #b8cbf6 0%,#c8d6f8 5%,#cedbf9 9%,#cedbf9 91%,#c5d4f8 96%,#b8caf6 100%);/*url("img/fondo_columna.gif") no-repeat*/
 }
 
 #pie {
   clear: both;
   height: 60px;
   margin-bottom: 50px;
-  background: linear-gradient(tp both, #6685CC); /*url("img/fondo_pie.jpg") no-repeat*/
+  background: linear-gradient(to bottom, #ebf4fd 0%,#ebf3fe 63%,#e9f2fb 73%,#eef4ff 90%,#ecf3f9 100%);/*url("img/fondo_pie.jpg") no-repeat*/
   color: #6685CC;
   position: relative;
 }
@@ -183,7 +183,7 @@ ol {
   clear: both;
   margin: 0;
   padding: 20px;
-  background: linear-gradient(to bottom, #DEE5FD, #ffffff); /*url("img/fondo_articulo.jpg") no-repeat*/
+  background:  linear-gradient(to bottom, #fffffd 0%,#fffbfc 1%,#ffffff 2%,#fcffff 2%,#f6fbff 3%,#e8eff7 4%,#dfe7f4 4%,#dfe6f6 5%,#dfe5fd 5%,#dfe5fb 6%,#e0e7fa 8%,#e0e6fe 8%,#e2e6ff 18%,#e3eafd 19%,#e2e9fc 24%,#e7edfd 29%,#e7edfd 36%,#e8eefe 37%,#eceefd 37%,#eff1fd 50%,#f4f2ff 53%,#f1f3ff 54%,#f3f3fd 57%,#f5f5ff 59%,#f3f6ff 63%,#f5f5ff 64%,#f6f7fc 64%,#f6f7fb 68%,#f9faff 71%,#faf9ff 77%,#f9fafc 79%,#fbfcfe 80%,#fefeff 88%,#ffffff 100%);/*url("img/fondo_articulo.jpg") no-repeat*/
 }
 
 #contenido .articulo img {
