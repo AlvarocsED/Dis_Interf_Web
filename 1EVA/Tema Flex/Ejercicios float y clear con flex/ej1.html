@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <style>
-        main { 
-            height: 200px; 
-            background-color: #c3c3c3; 
-            display: flex;
-            justify-content: space-between; 
-        } 
- 
-        main div { 
-            width: 100px; 
-            height: 100px; 
-        }
-        
-        main div.azclaro {
-            background-color: aqua;
-        }
-        
-        main div.rosa {
-            background-color: pink;
-        } 
+        #container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.div1 {
+  padding: 50px;
+  background-color: pink;
+}
+
+.div2 {
+  padding: 50px;
+  background-color: aqua;
+}
+
+code {
+  font-size: 90%;
+  background-color: lightgrey;
+  padding: 2px 5px;
+  font-family: 'Consolas', 'Lucida Console', 'Courier New', Courier, monospace;
+}
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Ejercicios Float. Ej. 1. Ahora con flex</title>
 </head>
+
 <body>
-    <main>
-        <div class="azclaro"></div>
-        <div class="rosa"></div>
-    </main>
+  <div id="container">
+    <div class="div1">Div1</div>
+    <div class="div2">Div2</div>
+  </div>
+  <hr>
+  <p>Al contenedor hay que añadirle <code>flex-direction: row-reverse</code> y <code>justify-content: space-between</code>.</p>
 </body>
+
 </html>
