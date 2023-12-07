@@ -1,5 +1,6 @@
 aside [class*="col-"] {
     padding: 5px !important;
+    display: flex;
   }
   
   aside h3 {
