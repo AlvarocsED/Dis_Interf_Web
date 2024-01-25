@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="my-button">Botón</button> 
+    <input type="text" id="my-input" disabled>
+    <script>
+        $('#my-button').click(function() {
+            $('#my-input').prop('disabled', false);
+        });
+    </script>
 </body>
 </html>
