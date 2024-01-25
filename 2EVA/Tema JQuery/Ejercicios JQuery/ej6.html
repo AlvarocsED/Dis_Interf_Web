@@ -12,5 +12,14 @@
         <br> 
         <button id="submit-button" disabled>Enviar</button> 
       </form>
+      <script>
+        $(document).ready(function(){
+      var checkbox = $('#checkbox');
+      var submitButton = $('#submit-button');
+      checkbox.change(function() {
+        submitButton.prop('disabled', !checkbox.is(':checked'));
+      });
+    });        
+      </script>
 </body>
 </html>
