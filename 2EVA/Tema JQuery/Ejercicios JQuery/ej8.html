@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="audi" name="brand" value="Audi"> 
+    <label for="audi">Audi</label> 
+    <input type="checkbox" id="mercedes" name="brand" value="Mercedes"> 
+    <label for="mercedes">Mercedes</label> 
+    <input type="checkbox" id="hyundai" name="brand" value="Hyundai"> 
+    <label for="hyundai">Hyundai</label> 
+    <p id="message"></p>
+
+    <script>
+        $(document).ready(function () {
+            $('input[name="brand"]').change(function () {
+                var selectedOptions = $('input[name="brand"]:checked').map(function () {
+                    return this.value;
+                }).get();
+
+                var messageElement = $('#message');
+
+                if (selectedOptions.length > 0) {
+                    messageElement.text('Opción seleccionada: ' + selectedOptions.join(', '));
+                } else {
+                    messageElement.text('No has seleccionado ninguna opción.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

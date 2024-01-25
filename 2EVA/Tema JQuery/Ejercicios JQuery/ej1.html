@@ -18,14 +18,14 @@
 
   <script>
     $(document).ready(function() {
-        var textarea = $("#miTextarea");
+    var textarea = $("#miTextarea");
     var contador = $("#contador");
 
       
-      textarea.on("input", function() {
-        var longitud = textarea.val().length;
+    textarea.on("input", function() {
+    var longitud = textarea.val().length;
 
-        contador.text(longitud + " caracteres");
+    contador.text(longitud + " caracteres");
       });
     });
   </script>
