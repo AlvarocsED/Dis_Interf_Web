@@ -14,10 +14,12 @@
         </select>
         <div id="resultado"></div>
         <script>
-            $('#brands').change(function() {
-                var selectedValue = $(this).val();
-                $('#resultado').text('Has seleccionado: ' + selectedValue);
-            });
+            $(document).ready(function() {
+      $('#brands').change(function() {
+        var selectedOption = $(this).val();
+        $('#resultado').text('Seleccionaste: ' + selectedOption);
+      });
+    });
         </script>
 </body>
 </html>
