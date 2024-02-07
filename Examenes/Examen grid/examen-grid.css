@@ -13,8 +13,8 @@ main>div {
   font-size: 1.25em;
   padding: 5px;
   border: 1px solid #555;
-  grid-template-columns: 4;
-  grid-template-rows: 3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
 }
 
 main>div:nth-child(1) {
