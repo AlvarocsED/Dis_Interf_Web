@@ -19,6 +19,7 @@ main>div {
 
 main>div:nth-child(1) {
   background-color: lightseagreen;
+  justify-self: start;
 }
 
 main>div:nth-child(2) {
