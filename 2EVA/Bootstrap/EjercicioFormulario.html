@@ -7,22 +7,94 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-xl">
-        <header>
-        <h1 class="text-center col-lg-12">Formulario de registro</h1>
-    </header>
-        <form>
-            <div class="row mb-3">
-            <div class="col-lg-6 col-md-12">
-              <label for="exampleInputEmail1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <label for="exampleInputPassword1" class="form-label">Apellidos</label>
-              <input type="text" class="form-control" id="exampleInputPassword1">
-            </div>
+    <div class="container-lg">
+
+    <h1 class="text-center my-4">Formulario de Registro</h1>
+
+    <form class="row g-3">
+
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" required>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="email" class="form-control" id="email" placeholder="">
+          <label for="email">Email</label>
         </div>
-            </form>
-    </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="tel" class="form-control" id="telefono" placeholder="">
+          <label for="telefono">Teléfono</label>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="poblacion" class="form-label">Población</label>
+        <input type="text" class="form-control" id="poblacion" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="provincia" class="form-label">Provincia</label>
+        <input list="provincias" class="form-control" id="provincia" required>
+        <datalist id="provincias">
+          <option value="Cáceres">Cáceres</option>
+          <option value="Badajoz">Badajoz</option>
+        </datalist>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="twitter">@</span>
+          <input type="text" class="form-control" placeholder="Twitter">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="website">🌐</span>
+          <input type="text" class="form-control" placeholder="Página Web">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="username" class="form-label">Nombre de Usuario</label>
+        <input type="text" class="form-control" id="username" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+
+      <div class="col-12 d-md-flex justify-content-md-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <input type="radio" class="btn-check" name="options" id="profe" autocomplete="off">
+          <label class="btn btn-outline-success" for="profe">Soy profesor</label>
+
+          <input type="radio" class="btn-check" name="options" id="alumno" autocomplete="off">
+          <label class="btn btn-outline-warning" for="alumno">Soy alumno</label>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <div class="form-check form-switch my-3">
+          <input class="form-check-input" type="checkbox" role="switch" id="privacidad">
+          <label class="form-check-label" for="privacidad">He leído y acepto las condiciones de privacidad</label>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
 </body>
 </html>
