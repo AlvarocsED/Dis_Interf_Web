@@ -24,28 +24,9 @@
   <div id="formulario-container"></div>
 
   <script>
-    $(document).ready(function() {
-      $('#btn-carga').click(function() {
-        $.ajax({
-          url: 'formulario.html',
-          success: function(data) {
-            $('#formulario-container').html(data).slideDown();
-            $('#formulario-container').addClass('loaded');
-            $('input[type="password"]').focus(function() {
-              $(this).css('background-color', 'lightgreen');
-            }).blur(function() {
-              if ($(this).val().length < 8) {
-                if (!$(this).next('.error-msg').length) {
-                  $(this).after('<span class="error-msg">Mínimo 8 caracteres</span>');
-                }
-              } else {
-                $(this).next('.error-msg').remove();
-              }
-            });
-          }
-        });
-      });
-    });
+    $(document).ready(function(){
+      
+    })
   </script>
 
 </body>
