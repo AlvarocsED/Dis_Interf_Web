@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container-xl">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container">
+                    <a class="navbar-brand text-white" href="inicio.html">
+                        <img src="img/bootstrap-logo-shadow.png" alt="Bootstrap Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        P4-DIW
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item disabled" aria-disabled="true">
+                                <a class="nav-link text-secondary" href="inicio.html">Lorem</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="#">Ipsum</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="#">Dolor</a>
+                            </li>
+                            <li class="nav-item active" aria-disabled="false">
+                                <a class="nav-link text-light" href="registro.html">Registro</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </nav>
+        <!-- Formulario -->
+        <div class="container">
+            <p class="fs-2">Formulario de registro</p>
+        </div>  
+        <form action="registro.html" class="align-content-center">
+            <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" placeholder="">
+                  <label for="email">Nombre</label>
+                </div>
+              </div>
+        </form>
+        </div>
 </body>
 </html>
