@@ -60,6 +60,32 @@
                           <input type="email" class="form-control" id="email" placeholder="">
                           <label for="email">Email</label>
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="date" class="form-control" id="fnac" placeholder="">
+                          <label for="fnac">Fecha de Nacimiento</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="genero">Genero</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selscciona una opción</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                          </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="caut">Comunidad autónoma</label>
+                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                        <datalist id="datalistOptions">
+                            <option value="San Francisco">
+                            <option value="New York">
+                            <option value="Seattle">
+                            <option value="Los Angeles">
+                            <option value="Chicago">
+                        </datalist>
                     </div>  
         </div>
 </body>
