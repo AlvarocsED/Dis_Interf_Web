@@ -39,10 +39,12 @@
             </nav>
         <!-- Formulario -->
         <div class="container-lg">
-            <div class="page-header">
+            <div class="border-bottom border-dark border-5">
                 <p class="fs-2">Formulario de registro</p>
             </div>
-            <form action="registro.html" class="row g-3">
+            <br>
+            <br>
+            <form action="registro.html" class="row g-3 bg-info">
                 <div class="col-md-6">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="nombre" placeholder="">
@@ -100,9 +102,50 @@
                         </datalist>
                     </div>  
                     <div class="col d-md-flex justify-content-md-center">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
                     </div>  
             </form>
         </div>
+        <script>
+            $(document).ready(function() {
+                $('#btnEnviar').click(function() {
+                    var formValido = true;
+                    $('#registroForm input[required], #registroForm select[required]').each(function() {
+                        if ($(this).val() === '') {
+                            formValido = false;
+                            return false; 
+                        }
+                    });
+    
+                    if (formValido) {
+                        $.ajax({
+                            url: 'registro.json',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: $('#registroForm').serialize(),
+                            success: function(response) {
+                                if (response.error === 0) {
+                                    mostrarAlerta('success', '¡Registro exitoso!');
+                                } else {
+                                    mostrarAlerta('danger', response.mensaje_error);
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                console.error(error);
+                                mostrarAlerta('danger', 'Error en el servidor. Inténtalo de nuevo más tarde.');
+                            }
+                        });
+                    } else {
+                        mostrarAlerta('warning', 'Por favor, completa todos los campos obligatorios.');
+                    }
+                });
+                function mostrarAlerta(tipo, mensaje) {
+                    $('#alerta').removeClass('alert-success alert-danger alert-warning')
+                                .addClass('alert-' + tipo)
+                                .text(mensaje)
+                                .fadeIn();
+                }
+            });
+        </script>
 </body>
 </html>
