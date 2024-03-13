@@ -37,12 +37,13 @@
             </div>
         </div>
         </nav>
-        <header class="container mt-4 row"> 
+        <header class="container mt-4">
+          <div class="row"> 
                 <div class="col-md-6 col-lg-9 text-center text-md-start">
                     <div class="card-body">
-                        <h3 class="card-title text-center d-md-flex justify-content-md-center">Lorem ipsum dolor amet consectetur</h3>
-                        <h4 class="card-subtitle mb-2 text-body-secondary text-center d-md-flex justify-content-md-center">Lorem ipsum dolor sit, amet consectetur adipisciing elit</h4>
-                        <h4 class="card-subtitle mb-2 text-body-secondary text-center d-md-flex justify-content-md-center">Sequi possimus laudantium tempora! Optio iste eligendi non?</h4>
+                        <h3 class="card-title text-center">Lorem ipsum dolor amet consectetur</h3>
+                        <h4 class="card-subtitle mb-2 text-body-secondary text-center">Lorem ipsum dolor sit, amet consectetur adipisciing elit</h4>
+                        <h4 class="card-subtitle mb-2 text-body-secondary text-center">Sequi possimus laudantium tempora! Optio iste eligendi non?</h4>
                         <a href="#" class="card-link"><img src="img/google-play-badge.png" alt="Logo Google Play" width="200" class="float-start"></a>
                         <a href="#" class="card-link"><img src="img/app-store-badge.png" alt="Logo App Store" width="200" class="float-lg-end"></a>
                     </div>
@@ -51,6 +52,7 @@
                     <img src="img/mobile-main.jpg" alt="Teléfono" width="200" class="float-lg-end">
                 </div>
             </div>
+          </div>
         </header>
         <section class="container mt-4">
             <div class="row">
@@ -95,6 +97,7 @@
     <!-- Sección accordion -->  
     <section class="container mt-4">
         <div class="bg-primary">
+          <p class="h2 text-center">Lorem Ipsum</p>
           <div class="row">
             <div class="col-lg-4">
               <img src="img/mobile-ilustration.png" alt="Movil2" class="rounded float-starttt" width="250">
@@ -155,6 +158,19 @@
                             </div>
                         </div>
                     </footer>
+                    <script>
+                      $(document).ready(function(){
+                          setTimeout(function(){
+                              $('<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 0; right: 0;">' +
+                                  '<div class="toast-header">' +
+                                      '<strong class="me-auto">Toast Title</strong>' +
+                                      '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>' +
+                                  '</div>' +
+                                  '<div class="toast-body">Hello world, this is a toast message.</div>' +
+                              '</div>').appendTo('body').toast('show');
+                          }, 3000); 
+                      });
+                  </script>                  
   </div>
 </body>
 </html>
