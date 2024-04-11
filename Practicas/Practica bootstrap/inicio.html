@@ -43,10 +43,10 @@
         <header class="container mt-4">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-12">
-                        <h1 class="display-1 text-sm-center">Lorem ipsum dolor amet consectetur</h1>
-                        <h4 class="display-7 text-secondary text-sm-center">Lorem ipsum dolor sit, amet consectetur adipiscing elit. Sequi possimus laudantfion temporal Optio iste eligendi non?</h4>
-                        <img src="img/google-play-badge.png" alt="Google Play" width="150">
-                        <img src="img/app-store-badge.png" alt="App Store" width="150">
+                        <h1 class="display-1 text-center text-lg-start">Lorem ipsum dolor amet consectetur</h1>
+                        <h4 class="display-7 text-secondary text-center text-lg-start">Lorem ipsum dolor sit, amet consectetur adipiscing elit. Sequi possimus laudantfion temporal Optio iste eligendi non?</h4>
+                        <img src="img/google-play-badge.png" alt="Google Play" width="250" class="text-center text-lg-start">
+                        <img src="img/app-store-badge.png" alt="App Store" width="250" class="text-center text-lg-start">
                     </div>
                     <div class="col-lg-4">
                         <div class="d-none d-lg-block float-lg-end">
@@ -159,16 +159,16 @@
                     <footer class="bg-dark text-white text-center py-4 mt-4">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-9  order-2">
+                                <div class="col-md-9 order-2 mt-4 order-md-1 mt-md-0">
                                     <p class="text-start">Powered by Álvaro Castellano Santos</p>
                                 </div>
 
-                                <div class="col-md-3 order-1">
-                                    <div class="text-light">Lorem ipsum</div>
-                                    <div class="text-secondary">Lorem</div>
-                                    <div class="text-secondary">Ipsum</div>
-                                    <div class="text-secondary">Dolor</div>
-                                    <div class="text-secondary">Registro</div>
+                                <div class="col-md-3 order-1 d-flex flex-row order-md-2 flex-md-column">
+                                    <div class="text-light d-none d-md-block"><a href="#" class="link-underline link-underline-opacity-0 text-light">Lorem Ipsum</a></div>
+                                    <div class="text-secondary flex-grow-1"><a href="#" class="link-underline link-underline-opacity-0 text-secondary">Lorem</a></div>
+                                    <div class="text-secondary flex-grow-1"><a href="#" class="link-underline link-underline-opacity-0 text-secondary">Ipsum</a></div>
+                                    <div class="text-secondary flex-grow-1"><a href="#" class="link-underline link-underline-opacity-0 text-secondary">Dolor</a></div>
+                                    <div class="text-secondary flex-grow-1"><a href="registro.html" class="link-underline link-underline-opacity-0 text-secondary">Registro</a></div>
                                 </div>
                                 
                             </div>
@@ -177,18 +177,18 @@
            
   </div>
 </div>
-</body>
 <script>
-    $(document).ready(function(){
-        setTimeout(function(){
-            $('<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 0; right: 0;">' +
-                '<div class="toast-header">' +
-                    '<strong class="me-auto">Toast Title</strong>' +
-                    '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>' +
-                '</div>' +
-                '<div class="toast-body">Hello world, this is a toast message.</div>' +
-            '</div>').appendTo('body').toast('show');
-        }, 3000); 
-    });
-  </script>     
+$(document).ready(function(){
+    setTimeout(function(){
+        $('<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 0; right: 0;">' +
+            '<div class="toast-header">' +
+                '<strong class="me-auto">Toast Title</strong>' +
+                '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>' +
+            '</div>' +
+            '<div class="toast-body">Hello world, this is a toast message.</div>' +
+        '</div>').appendTo('body').toast('show');
+    }, 3000); 
+});
+</script>     
+</body>
 </html>
