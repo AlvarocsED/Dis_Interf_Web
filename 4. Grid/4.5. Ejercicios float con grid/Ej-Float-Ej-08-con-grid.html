@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicios Float. Ej. 8. Ahora con grid</title>
+  <link rel="stylesheet" href="css/Ej-Float-Ej-08.css">
+</head>
+
+<body>
+  <div id="container">
+
+    <div class="img-container">
+      <img src="https://source.unsplash.com/random/200x200?sig=1">
+      <p class="titulo_imagen">Lorem ipsum dolor sit amet</p>
+    </div>
+
+    <div class="img-container">
+      <img src="https://source.unsplash.com/random/200x200?sig=2">
+      <p class="titulo_imagen">Facilis tempora ab quibusdam</p>
+    </div>
+
+    <div class="img-container">
+      <img src="https://source.unsplash.com/random/200x200?sig=3">
+      <p class="titulo_imagen">Autem saepe accusantium</p>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div>Isaac Expósito</div>
+    <div>2º DAW. Diseño de Interfaces Web</div>
+  </div>
+
+  <hr>
+
+  <p>Para este ejercicio tenemos varias posibles soluciones, que serían poner en el contenedor alguna de estas instrucciones:</p>
+  <ol>
+    <li>
+      <p><code>grid-auto-flow: column</code>. Esta forma sólo funciona si todas las imágenes tienen el mismo tamaño y el texto también es el mismo. Vamos, que no.</p>
+    </li>
+    <li>
+      <p><code>grid-template-columns: repeat(3, auto)</code>. Tiene el mismo problema que la instrucción anterior porque en ambas las columnas se definen con un tamaño <code>auto</code>.</p>
+    </li>
+    <li>
+      <p><code>grid-template-columns: repeat(3, 33.33%)</code>. Esta solución es buena, pero falla si se utiliza <code>column-gap</code>, dado que se produciría desbordamiento horizontal en el contenedor.</p>
+    </li>
+    <li>
+      <p><code>grid-template-columns: repeat(3, 1fr)</code>. Esta es una buena solución. Funciona con tamaños de imágenes distintos, textos distintos y <code>column-gap</code> no produce desbordamiento.</p>
+    </li>
+    <li>
+      <p><code>grid-template-columns: repeat(auto-fit, minmax(50px, 1fr))</code>. Análoga a la anterior, pero incluso mejor porque no necesitamos definir el número de columnas.</p>
+    </li>
+  </ol>
+
+</body>
+
+</html>

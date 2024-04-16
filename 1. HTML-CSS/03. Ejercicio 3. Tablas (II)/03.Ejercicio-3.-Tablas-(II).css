@@ -1,0 +1,48 @@
+table {
+  width: 50%;
+  border-spacing: 5px;
+}
+
+th {
+  border: 2px inset black;
+  border-radius: 5px;
+  background-color: aqua;
+}
+
+td {
+  text-align: center;
+  background-color: beige;
+  padding: 2px;
+  border: 1px solid black;
+}
+
+td:hover {
+  background-color: coral;
+}
+
+#esp {
+  background-image: linear-gradient(red, yellow, yellow, red);
+  cursor: pointer;
+}
+
+#arg {
+  background-image: linear-gradient(
+    rgb(0, 183, 255),
+    white,
+    white,
+    rgb(0, 183, 255)
+  );
+  cursor: pointer;
+}
+
+#fra {
+  background-image: linear-gradient(to right, blue, white, white, red);
+  cursor: pointer;
+}
+
+#esp:active,
+#fra:active,
+#arg:active {
+  background-image: none;
+  background-color: white;
+}

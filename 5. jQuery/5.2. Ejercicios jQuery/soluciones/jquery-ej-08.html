@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 8</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 8</h2>
+    <h3>A partir del siguiente HTML en el que tenemos 3 checkboxes con marcas de coche, cuando el usuario marque o desmarque un checkbox aparecerá un mensaje indicando la opción u opciones seleccionadas. Si no ha seleccionado ninguna, también saldrá el mensaje indicándolo.</h3>
+
+    <hr>
+
+    <input type="checkbox" id="audi" name="brand" value="Audi">
+    <label for="audi">Audi</label>
+
+    <input type="checkbox" id="mercedes" name="brand" value="Mercedes">
+    <label for="mercedes">Mercedes</label>
+
+    <input type="checkbox" id="hyundai" name="brand" value="Hyundai">
+    <label for="hyundai">Hyundai</label>
+
+    <p id="message"></p>
+
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // El evento que tenemos que usar podría ser "change", "input" o "click"
+      // El mejor: "change". Con "input" podríamos tener problemas de compatibilidad
+      // El selector también podría ser: "input[type=checkbox]" o "input[name='brand']"
+      $("input[type=checkbox]").on("change", function () {
+        var texto = "Opciones seleccionadas: ";
+        var $cb_checked = $(":checkbox:checked");
+
+        if ($cb_checked.length > 0) {
+          $cb_checked.each(function () {
+            texto = texto + $(this).val() + " ";
+          });
+          $("#message").text(texto);
+        }
+        else {
+          $("#message").text("No has seleccionado ninguna opción.");
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

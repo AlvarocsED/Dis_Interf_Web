@@ -1,0 +1,26 @@
+body {
+  font-size: 140%;
+}
+
+.border-none {
+  border-style: none;
+}
+
+.border-hidden {
+  border-style: hidden;
+}
+
+table,
+td {
+  border-width: 10px;
+  border-style: solid;
+  border-color: black;
+  border-collapse: collapse;
+  background-color: aquamarine;
+  font-family: "Courier New", Courier, monospace;
+}
+
+code {
+  background: #eee;
+  padding: 1px 5px;
+}

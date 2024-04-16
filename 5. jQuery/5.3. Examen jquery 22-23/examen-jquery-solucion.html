@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2023-03-06. jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <input type="button" id="btn-carga" value="Cargar formulario">
+  <div id="formulario-container"></div>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#btn-carga").on("click", function () {
+
+        $("#formulario-container").hide();
+
+        $("#formulario-container").load("formulario.html", function (response, status, xhr) {
+          if (status == "success") {
+            $(this).css("border", "2px solid black");
+            $(this).css("padding", "1rem");
+            $(this).slideDown();
+          }
+          else {
+            alert("Error al cargar el formulario.");
+          }
+        });
+
+        // Con $.ajax:
+        // $.ajax({
+        //   url: "formulario.html",
+        //   type: "GET",
+        //   dataType: "html",
+        //   success: function (response) {
+        //     $("#formulario-container").css("border", "2px solid black");
+        //     $("#formulario-container").css("padding", "1rem");
+        //     $("#formulario-container").html(response).slideDown();
+        //   },
+        //   error: function (xhr, status, error) {
+        //     alert("Error al cargar el formulario.");
+        //   }
+        // });
+
+
+      });
+
+      $("#formulario-container").on("focus", "input[type='password']", function () {
+        $(this).css("background-color", "lightgreen");
+      });
+
+      $("#formulario-container").on("blur", "input[type='password']", function () {
+
+        $(".error").hide();
+
+        if ($(this).val().length < 8) {
+          $(this).css("background-color", "red");
+
+          if ($("span.error").length > 0) {
+            $(".error").show();
+          }
+          else {
+            $(this).after("<span class='error'>Mínimo 8 caracteres<span>");
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

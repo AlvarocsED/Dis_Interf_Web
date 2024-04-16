@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width:auto vs. width:100%</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #container {
+      width: 400px;
+      padding: 0;
+      background: #ccc;
+      border: 1px solid black;
+    }
+
+    #container>* {
+      margin: 0 50px;
+      padding: 0 50px;
+      border: 10px solid #999;
+      border-width: 0 10px;
+    }
+
+    #child-1 {
+      width: auto;
+      background: #fee;
+    }
+
+    #child-2 {
+      width: 100%;
+      background: #efe;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>width:auto vs. width:100%</h1>
+
+  <div id="container">
+    <div id="child-1">
+      <p>Soy el primer hijo.<br>Mi anchura es <code>auto</code>.<br>La suma de mis márgenes horizontales, paddings y bordes es de 220px.</p>
+    </div>
+    <div id="child-2">
+      <p>Soy el segundo hijo.<br>La suma de mis márgenes horizontales, paddings y bordes también es de 220px. Pero mi anchura es <code>100%</code>, por lo que no quepo en el contenedor.</p>
+    </div>
+  </div>
+
+  <p>Este ejemplo está disponible en <a href="https://codepen.io/Isaac-Exp-sito-L-pez/pen/zYeaqLK">codepen</a></p>
+</body>
+
+</html>

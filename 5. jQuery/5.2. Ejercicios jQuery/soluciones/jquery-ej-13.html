@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 13</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 13</h2>
+    <h3>Una llamada Ajax a nuestro servidor nos devuelve una lista de coches y modelos en formato JSON en texto plano. Crea el código jQuery para insertar dinámicamente en el div con id respuesta una lista ordenada de los coches que recibimos.</h3>
+
+    <hr>
+
+    <input type="button" value="Actualizar" id="refresh">
+    <div id="respuesta"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#refresh").click(function () {
+          $.ajax({
+            url: "jquery-ej-13-coches.txt",
+            type: "GET",
+            success: function (data) {
+              var json = JSON.parse(data);
+              var html = "<ol>";
+
+              $.each(json, function (index, marca) {
+                html += "<li>" + marca.marca + "</li>";
+                html += "<ol>";
+                $.each(marca.coches, function (index, coche) {
+                  html += "<li>" + coche.modelo + ", " + coche.color.toLowerCase() + ", " + coche.precio + "</li>";
+                });
+                html += "</ol>";
+              });
+
+              html += "</ol>";
+              $("#respuesta").html(html);
+
+              /*
+              Usando forEach:
+                json.forEach(function (marca) {
+                  html += "<li>" + marca.marca + "</li><ol>";
+                  marca.coches.forEach(function (coche) {
+                    html += "<li>" + coche.modelo + ", " + coche.color.toLowerCase() + ", " + coche.precio + "</li>";
+                  });
+                  html += "</ol>";
+                });
+                html += "</ol>";
+                $("#respuesta").html(html);
+              */
+
+              /*
+              Usando for:
+                for (var i = 0; i < json.length; i++) {
+                  var marca = json[i];
+                  html += "<li>" + marca.marca + "</li><ol>";
+                  for (var j = 0; j < marca.coches.length; j++) {
+                    var coche = marca.coches[j];
+                    html += "<li>" + coche.modelo + ", " + coche.color.toLowerCase() + ", " + coche.precio + "</li>";
+                  }
+                  html += "</ol>";
+                }
+                html += "</ol>";
+                $("#respuesta").html(html);
+              */
+            }
+          });
+        });
+      });
+    </script>
+
+
+
+
+
+
+  </div>
+</body>
+
+</html>

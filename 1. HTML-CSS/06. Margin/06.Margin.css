@@ -1,0 +1,28 @@
+div {
+  border: 5px solid black;
+  padding: 10px;
+  /* outline: 5px solid green; */
+  /* outline-offset: 0px; */
+}
+
+div.uno {
+  margin-bottom: 10px;
+}
+
+div.dos {
+  margin-top: 0px;
+}
+
+div.tres {
+  display: inline-block;
+  width: 200px;
+  margin-right: 10px;
+  /* margin-inline: 0px 0px; */
+}
+
+div.cuatro {
+  display: inline;
+  width: 200px;
+  margin-left: 0px;
+  /* margin-inline: 0px 0px; */
+}

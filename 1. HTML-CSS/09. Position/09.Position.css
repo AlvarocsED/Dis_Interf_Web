@@ -1,0 +1,50 @@
+p.def {
+  font-size: 16pt;
+}
+
+div {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.absolute {
+  position: absolute;
+  padding: 20px;
+  right: 10px;
+  top: 10px;
+  background-color: lightyellow;
+}
+
+.fixed {
+  position: fixed;
+  padding: 20px;
+  right: 100px;
+  bottom: 50px;
+  border-radius: 50%;
+  background-color: lightskyblue;
+}
+
+.relative {
+  position: relative;
+  padding: 5px 10px;
+  top: 0px;
+  background-color: lightcyan;
+}
+
+.contenedor-relative {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 10px 10px 10px;
+  background-color: lightpink;
+}
+
+.sticky {
+  position: sticky;
+  padding: 20px;
+  background-color: lightgreen;
+  text-align: center;
+  margin-top: 5px;
+  top: 0;
+}

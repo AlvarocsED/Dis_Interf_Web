@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 11</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 11</h2>
+    <h3>Crea el código jQuery que inserte y actualice dinámicamente en el div con id resultado un mensaje con la opción seleccionada por el usuario en el siguiente select:</h3>
+
+    <hr>
+
+    <select id="brands">
+      <option value="audi">Audi</option>
+      <option value="bmw">BMW</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="hyundai">Hyundai</option>
+    </select>
+    <div id="resultado"></div>
+
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      var contador = 0;
+      $("#brands").on("change", function () {
+        contador++;
+        $("#resultado").append("<p>" + contador + ". Has seleccionado " + $(this).val() + "</p>");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

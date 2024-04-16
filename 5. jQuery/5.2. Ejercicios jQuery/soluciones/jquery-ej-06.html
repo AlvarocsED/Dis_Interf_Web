@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 6</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 6</h2>
+    <h3>A partir del siguiente formulario, crea el código jQuery para que el checkbox habilite/deshabilite el botón “Enviar”.</h3>
+
+    <hr>
+
+    <form>
+      <label for="checkbox"> Selecciona para habilitar el botón:</label>
+      <input type="checkbox" id="checkbox">
+      <br>
+      <button id="submit-button" disabled>Enviar</button>
+    </form>
+
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // El evento que tenemos que usar podría ser "change", "input" o "click"
+      // El mejor: "change". Con "input" podríamos tener problemas de compatibilidad
+      $("#checkbox").on("change", function () {
+        if ($(this).prop("checked")) {
+          $("#submit-button").prop("disabled", false);
+        } else {
+          $("#submit-button").prop("disabled", true);
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

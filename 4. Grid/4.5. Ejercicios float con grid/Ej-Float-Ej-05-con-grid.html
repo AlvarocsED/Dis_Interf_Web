@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicios Float. Ej. 5. Ahora con grid</title>
+  <link rel="stylesheet" href="css/Ej-Float-Ej-05.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="div1">Div1</div>
+    <div class="div2">Div2</div>
+    <div class="div3">Div3</div>
+    <div class="div4">Div4</div>
+  </div>
+
+  <hr>
+
+  <p>La forma más fácil y rápida de hacer este ejercicio con grid es simplemente poniendo en el contenedor <code>grid-auto-flow: column</code>. No hace falta usar <code>grid-template-columns</code> para definir las 4 columnas porque se crean y se les asigna un valor <code>auto</code> por defecto.</p>
+  <p>Otra opción sería <code>grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))</code>, siendo 100px un valor arbitrario. La diferencia radica en que esta solución evita el desbordamiento horizontal cuando la pantalla se hace muy estrecha resituando los ítems en filas.</p>
+</body>
+
+</html>

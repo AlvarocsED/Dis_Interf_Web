@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 3</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+
+  <style>
+    .sinalt {
+      border: 10px solid red;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 3</h2>
+    <h3>Crea el código jQuery que ponga la clase “sinalt” a todas las imágenes que no tengan el atributo “alt” o lo tengan vacío.</h3>
+
+    <hr>
+
+    <img src="https://picsum.photos/180" alt="">
+
+    <img src="https://picsum.photos/180" alt="">
+
+    <img src="https://picsum.photos/180">
+
+    <img src="https://picsum.photos/180" alt="Soy un texto">
+
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("img").each(function () {
+        if (!$(this).attr("alt") || $(this).attr("alt").trim() === "") {
+          $(this).addClass("sinalt");
+        }
+      });
+
+      // En este ejemplo concreto no es necesario .each() ni .attr():
+      $("img[alt=''], img:not([alt])").addClass("sinalt");
+    });
+  </script>
+
+</body>
+
+</html>

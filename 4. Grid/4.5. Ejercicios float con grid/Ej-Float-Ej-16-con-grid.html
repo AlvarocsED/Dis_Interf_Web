@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicios Float. Ej. 16. Ahora con grid</title>
+  <link rel="stylesheet" href="css/Ej-Float-Ej-16-dado.css">
+  <link rel="stylesheet" href="css/Ej-Float-Ej-16.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- To Do list -->
+    <div class="todolist">
+
+      <!-- To Do Item -->
+      <div class="todo">
+        <div>
+          <div class="icon urgent">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Pay Rent</div>
+            <div class="todo-date">April 1</div>
+          </div>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="checkbox-right" value="None" name="check">
+          <label for="check"></label>
+        </div>
+      </div>
+
+      <!-- To Do Item -->
+      <div class="todo">
+        <div>
+          <div class="icon urgent">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Pay taxes</div>
+            <div class="todo-date">April 14</div>
+          </div>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="checkbox-right" value="None" name="check">
+          <label for="check"></label>
+        </div>
+      </div>
+
+      <!-- To Do Item -->
+      <div class="todo">
+        <div>
+          <div class="icon medium">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Do floats homework</div>
+            <div class="todo-date">Monday, April 21</div>
+          </div>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="checkbox-right" value="None" name="check">
+          <label for="check"></label>
+        </div>
+      </div>
+
+      <!-- To Do Item -->
+      <div class="todo">
+        <div>
+          <div class="icon medium">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Get groceries</div>
+            <div class="todo-date">Friday, April 18</div>
+          </div>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="checkbox-right" value="None" name="check">
+          <label for="check"></label>
+        </div>
+      </div>
+
+      <!-- To Do Item -->
+      <div class="todo">
+        <div>
+          <div class="icon">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Get a haircut</div>
+            <div class="todo-date">Friday, April 18</div>
+          </div>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="checkbox-right" value="None" name="check">
+          <label for="check"></label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div style="background-color: white; padding: 5px 10px;">
+    <p>Para cada entrada de la lista (clase <i>todo</i>) solo hay que poner <code>grid-auto-flow: column</code> y <code>justify-content: space-between</code> para mandar el checkbox a la derecha.</p>
+
+    <p>En el div interior, donde está el título y el icono, sustituímos <code>flex</code> por <code>grid</code> y añadimos <code>grid-auto-flow: column</code>. La mejor forma de seleccionar ese div concretamente es con CSS: <code>.todo>div:first-child</code></p>
+  </div>
+
+</body>
+
+</html>

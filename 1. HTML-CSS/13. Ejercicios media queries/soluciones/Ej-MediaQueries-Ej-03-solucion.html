@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicios Media Queries. Ej. 3</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+
+    @media (min-width: 400px) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+
+    @media (min-width: 800px) {
+      body {
+        background-color: pink;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p>Ejercicio 3. Modifica el color de fondo de <code>&lt;body&gt;</code> a “pink” si la anchura del viewport es de 800px o mayor, a “lightgreen” si está entre 400 y 799px. Si es menor de 400px, color de fondo será “lightblue”.</p>
+  <hr>
+  <p><b>¡Cuidado!</b> La siguiente solución funciona, pero es un error porque no respeta el principio de <b>mobile first</b>:</p>
+  <pre>
+    body {
+      background-color: pink;
+    }
+    
+    @media (max-width: 800px) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+  </pre>
+
+  <p><b>SIEMPRE</b> es mejor hacerlo <b>mobile first</b>. Es decir, establecer primero los estilos para pantallas pequeñas y añadir las media queries después para anchuras mayores. Por tanto, mejor así:</p>
+  <pre>
+    body {
+      background-color: lightblue;
+    }
+    
+    @media (min-width: 400px) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+    
+    @media (min-width: 800px) {
+      body {
+        background-color: pink;
+      }
+    }
+  </pre>
+  <p>Relación de ejercicios extraída de <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target="_blank">w3schools</a></p>
+</body>
+
+</html>

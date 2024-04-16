@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 14</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 14</h2>
+    <h3>Dado el siguiente HTML, diseña el código jQuery para que se analice cada tecla pulsada en el input. Si es un carácter válido para números binarios se insertará. Si no lo es, no se insertará, se mostrará un mensaje de error durante 1 segundo y luego se ocultará (usa el método delay()).</h3>
+
+    <hr>
+
+    <style>
+      #error-message {
+        display: none;
+        color: red;
+      }
+    </style>
+
+    <form>
+      <label for="binary-input">Introduce un número binario:</label>
+      <input type="text" id="binary-input" maxlength="8">
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="error-message">Introduce sólo números binarios (0 ó 1).</div>
+
+    <script>
+      $(document).ready(function () {
+        $('#binary-input').on('keydown', function (e) {
+          console.log(e.key);
+          if (e.key !== '0' && e.key !== '1' && e.key !== 'Backspace') {
+            $('#error-message').slideDown().delay(1000).slideUp();
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
+
+  </div>
+</body>
+
+</html>

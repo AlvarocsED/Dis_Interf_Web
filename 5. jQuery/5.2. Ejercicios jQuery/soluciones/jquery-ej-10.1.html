@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery. Ejercicio 10.1</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="estilos_generales.css">
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <h2>Ejercicio 10</h2>
+    <h3>Crea el código jQuery que compruebe si los dos campos de texto del siguiente formulario de login están vacíos. Proporciona 2 soluciones:</h3>
+    <h3>10.1. Si alguno lo está, mostrará un mensaje de alerta debajo del formulario con un efecto slide.</h3>
+
+    <hr>
+
+    <form id="login-form">
+      <input type="text" name="username" id="username" placeholder="Nombre de Usuario">
+      <input type="password" name="password" id="password" placeholder="Contraseña">
+      <input type="submit" id="submit-btn" value="Iniciar Sesión">
+      <div id="alert"></div>
+    </form>
+
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // Usar clic es un error porque impide que se capture el evento
+      // cuando el formulario se envía por teclado
+      $("#login-form").on("submit", function (e) {
+        e.preventDefault(); // Evita que se envíe el formulario
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        // Oculta el mensaje de alerta si estaba visible
+        $("#alert").hide();
+
+        if (username.trim() === "" || password.trim() === "") {
+          $("#alert").text("Por favor, ingrese un usuario y una contraseña.").slideDown();
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

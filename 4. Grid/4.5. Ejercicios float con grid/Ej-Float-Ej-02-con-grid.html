@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicios Float. Ej. 2. Ahora con grid</title>
+  <link rel="stylesheet" href="css/Ej-Float-Ej-02.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="div1">Div1</div>
+    <div class="div2">Div2</div>
+    <div class="div3">Div3</div>
+  </div>
+
+  <hr>
+
+  <p>Algunas formas de hacerlo con grid:</p>
+
+  <ol>
+    <li>
+      <p>Quizá la alternativa más elegante es poner en el contenedor <code>grid-template-columns: auto auto 1fr</code>, indicar al Div1 que se vaya a la derecha con <code>justify-self: right</code> y reordenarlo con <code>order: 1</code>.</p>
+    </li>
+
+    <li>
+      <p>Usando áreas sería poniendo en el contenedor <code>grid-template-columns: auto auto 1fr auto</code> y <code>grid-template-areas: "a b . c"</code>. Y ya solo tenemos que situar los ítems en sus posiciones con <code>grid-area</code>.</p>
+    </li>
+
+    <li>
+      <p>Siguiendo con la última solución del ejercicio anterior, poniendo en el contenedor <code>grid-template-columns: auto auto 1fr auto</code> y metiendo un div vacío en medio del Div2 y Div3 para que ocupe la columna con <code>1fr</code>. Solo faltaría reordenar con <code>order: 1</code>.</p>
+    </li>
+  </ol>
+</body>
+
+</html>

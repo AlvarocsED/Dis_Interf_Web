@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04. boder-style none vs hidden</title>
+  <link rel="stylesheet" href="04.boder-style-none-vs-hidden.css">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+    </tr>
+    <tr>
+      <td class="borde">Celda 6</td>
+      <td class="border-hidden">border-hidden</td>
+      <td class="borde">Celda 8</td>
+      <td class="border-none">border-none</td>
+      <td class="borde">Celda 10</td>
+    </tr>
+    <tr>
+      <td>Celda 11</td>
+      <td>Celda 12</td>
+      <td>Celda 13</td>
+      <td>Celda 14</td>
+      <td>Celda 15</td>
+    </tr>
+  </table>
+
+  <p>
+    Como ya sabemos, con <code>border-collapse: collapse;</code> unimos los bordes de las celdas. De hecho, aunque añadamos <code>border-spacing: 50px;</code> el borde se sigue viendo igual. Podéis probarlo.
+  </p>
+  <p>
+    Si tenemos una celda con un borde visible (como las celdas 2, 6, 8 o 12) y queremos que una celda adyacente no tenga borde debemos indicarlo con <code>border-style: hidden;</code>. Esta instrucción prevalece sobre el
+    borde visible de las celdas que lo tienen.
+  </p>
+  <p>
+    Si ponemos <code>border-style: none;</code>, entonces el borde visible de las celdas adyacentes prevalece sobre esa <code>border-style: none;</code> y el borde se ve, como en el caso de la celda 9.
+  </p>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicios Media Queries. Ej. 2</title>
+  <style>
+    .ocultable {
+      padding: 10px;
+      background-color: yellow;
+      border: 2px solid red;
+    }
+
+    @media (min-width: 600px) {
+      .ocultable {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p>Ejercicio 2. Oculta un elemento cuando la anchura del viewport sea de 600px o más.</p>
+  <hr>
+  <div class="ocultable">Sólo se me verá con 600px o más.</div>
+  <p>Relación de ejercicios extraída de <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp"
+      target="_blank">w3schools</a></p>
+</body>
+
+</html>
