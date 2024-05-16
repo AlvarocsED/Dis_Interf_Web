@@ -227,16 +227,22 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            console.log("Hola");
-            var $toast = $('<div class="toast">¡La página ha cargado completamente!</div>');
-            $('body').append($toast);
-            setTimeout(function () {
-                 $toast.show(); // Muestra el toast durante 2 segundos
-             }, 3000);
-        });
-    </script>
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    var toast = $('<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">\
+                                <div class="d-flex">\
+                                    <div class="toast-body">\
+                                        Este es un mensaje de ejemplo.\
+                                    </div>\
+                                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>\
+                                </div>\
+                            </div>');
+                    $('body').append(toast);
+                    toast.toast('show');
+                }, 3000);
+            });
+        </script>
 </body>
 
 </html>
