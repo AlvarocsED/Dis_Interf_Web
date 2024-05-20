@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 
-.clearfix::after,
-.row::after {
+.clearfix::after {
   content: "";
   clear: both;
   display: table;
@@ -34,8 +33,6 @@ nav {
   top: 0px;
   z-index: 9999;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav a {
@@ -48,3 +45,6 @@ nav a:hover {
   background-color: red;
 }
 
+nav> :last-child {
+  margin-left: auto;
+}

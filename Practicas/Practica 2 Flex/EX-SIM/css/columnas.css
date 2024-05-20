@@ -1,20 +1,32 @@
-/* For mobile phones: */
+/* MOBILE FIRST */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 [class*="col-"] {
   width: 100%;
   padding: 15px;
-  box-sizing: border-box;
+  flex: 0 0 auto;
 }
 
-#container {
-  width: 100%;
-}
-
-/* For tablets: */
-@media only screen and (min-width: 768px) {
-  .row{
-    display: flex;
-    flex-wrap: wrap;    
+/* TABLETS: 600-900px */
+@media only screen and (min-width: 600px) {
+  #container {
+    width: 100%;
   }
+
+  /* Hay que poner los márgenes a hola y adiós y hacer que floten */
+  .hola {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .adios {
+    float: right;
+    margin-left: 20px;
+  }
+
   .col-t-1 {
     width: 8.33%;
   }
@@ -64,26 +76,11 @@
   }
 }
 
-/* For desktop: */
-@media only screen and (min-width: 1200px) {
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  [class*="col-e-"]{
-    flex: 1;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-  /* Contenedor de 1140px y centrado para versión de escritorio */
+/* ESCRITORIO: 900+px */
+@media only screen and (min-width: 900px) {
   #container {
-    width: 1140px;
+    width: 800px;
     margin: 0 auto;
-  }
-
-  /* Link de ir arriba se muestra solo en versión de escritorio */
-  a#totop {
-    display: block;
   }
 
   .col-e-1 {

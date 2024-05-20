@@ -1,0 +1,154 @@
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  padding: 15px;
+  flex: 0 0 auto;
+}
+
+/*
+  Para móviles (es decir, por defecto), los hijos de #secundario los ponemos en 2 columnas.
+  Para eso los flotamos y les damos una anchura de 48% y un margen de 2% a la derecha para los
+  imaper y a la izquierda para los pares.
+  La pseudoclase :where la usamos para eliminar la especificidad del selector. Si no lo ponemos,
+  este selector tiene más especificidad que el selector que se usa en la media query para eliminar
+  los márgenes y, por tanto, el selector de la media query no se ejecutaría.
+*/
+#contenido #secundario>* {
+  width: calc(50% - 10px);
+  float: left;
+}
+
+:where(#contenido #secundario #sobremi, #contenido #secundario #enlaces) {
+  margin-right: 10px;
+}
+
+/* Por supuesto, al flotar elementos tenemos que usar el hack clearfix */
+#contenido #secundario::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* SOLO PARA PRUEBAS. BORRAR EN VERSION FINAL */
+/* #contenido>.row>*:first-child {
+  display: none;
+} */
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+
+  /* SOLO PARA PRUEBAS. BORRAR EN VERSION FINAL */
+  /* #contenido>.row>*:first-child {
+    display: initial;
+  } */
+
+  /* Para tablets en adelante, los hijos de #secundario dejan de flotar */
+  #contenido #secundario>* {
+    width: 100%;
+    float: none;
+    margin: 0px;
+  }
+
+  .col-t-1 {
+    width: 8.33%;
+  }
+
+  .col-t-2 {
+    width: 16.66%;
+  }
+
+  .col-t-3 {
+    width: 25%;
+  }
+
+  .col-t-4 {
+    width: 33.33%;
+  }
+
+  .col-t-5 {
+    width: 41.66%;
+  }
+
+  .col-t-6 {
+    width: 50%;
+  }
+
+  .col-t-7 {
+    width: 58.33%;
+  }
+
+  .col-t-8 {
+    width: 66.66%;
+  }
+
+  .col-t-9 {
+    width: 75%;
+  }
+
+  .col-t-10 {
+    width: 83.33%;
+  }
+
+  .col-t-11 {
+    width: 91.66%;
+  }
+
+  .col-t-12 {
+    width: 100%;
+  }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 900px) {
+  #contenedor {
+    width: 770px;
+  }
+
+  .col-e-1 {
+    width: 8.33%;
+  }
+
+  .col-e-2 {
+    width: 16.66%;
+  }
+
+  .col-e-3 {
+    width: 25%;
+  }
+
+  .col-e-4 {
+    width: 33.33%;
+  }
+
+  .col-e-5 {
+    width: 41.66%;
+  }
+
+  .col-e-6 {
+    width: 50%;
+  }
+
+  .col-e-7 {
+    width: 58.33%;
+  }
+
+  .col-e-8 {
+    width: 66.66%;
+  }
+
+  .col-e-9 {
+    width: 75%;
+  }
+
+  .col-e-10 {
+    width: 83.33%;
+  }
+
+  .col-e-11 {
+    width: 91.66%;
+  }
+
+  .col-e-12 {
+    width: 100%;
+  }
+}
