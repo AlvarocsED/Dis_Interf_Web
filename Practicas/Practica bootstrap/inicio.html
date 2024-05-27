@@ -16,35 +16,36 @@
     <!-- Barra de navegacion -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
         <div class="container-fluid">
-          <a class="navbar-brand" href="inicio.html">
-            <img src="img/bootstrap-logo-shadow.png" alt="Titulo" height="24" width="30">
-            P4-DIW
-        </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Lorem</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ipsum</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Dolor</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="registro.html" tabindex="-1" aria-disabled="true">Registro</a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="inicio.html">
+                <img src="img/bootstrap-logo-shadow.png" alt="Titulo" height="24" width="30">
+                P4-DIW
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Lorem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ipsum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Dolor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html" tabindex="-1" aria-disabled="true">Registro</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
     <!-- Header -->
     <header class="container-xl mt-4">
         <div class="row align-items-center">
@@ -194,8 +195,8 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
+            </div>
+        </div>
     </section>
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-4">
@@ -230,22 +231,24 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                setTimeout(function () {
-                    var toast = $('<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">\
-                                <div class="d-flex">\
-                                    <div class="toast-body">\
-                                        Este es un mensaje de ejemplo.\
-                                    </div>\
-                                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>\
+    <script>
+        $(document).ready(function () {
+            function mostrarToast() {
+                var toast = $('<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">\
+                            <div class="d-flex">\
+                                <div class="toast-body">\
+                                    Ahora.\
                                 </div>\
-                            </div>');
-                    $('body').append(toast);
-                    toast.toast('show');
-                }, 3000);
-            });
-        </script>
+                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>\
+                            </div>\
+                        </div>');
+                $('body').append(toast);
+                toast.show();
+            }
+
+            setTimeout(mostrarToast, 3000);
+        });
+    </script>
 </body>
 
 </html>
