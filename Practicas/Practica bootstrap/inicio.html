@@ -222,6 +222,19 @@
             </div>
         </div>
     </footer>
+    <div aria-live="polite" aria-atomic="true" class="position-relative bd-example-toasts rounded-3">
+        <div class="toast-container p-3 position-fixed bottom-0 end-0">
+            <div class="toast text-bg-dark" id="mensaje">
+                <div class="toast-header">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>Ahora</small>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -233,20 +246,11 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            function mostrarToast() {
-                var toast = $('<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">\
-                            <div class="d-flex">\
-                                <div class="toast-body">\
-                                    Ahora.\
-                                </div>\
-                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>\
-                            </div>\
-                        </div>');
-                $('body').append(toast);
-                toast.show();
-            }
+            setTimeout(function () {
+                //$('#mensaje').toast();
+                $('#mensaje').toast('show');
 
-            setTimeout(mostrarToast, 3000);
+            }, 3000);
         });
     </script>
 </body>
