@@ -13,40 +13,38 @@
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="inicio.html">
-                    <img src="img/bootstrap-logo-shadow.png" alt="Titulo" height="24" width="30">
-                    P4-DIW
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <img src="img/bootstrap-logo-shadow.png" alt="Titulo" height="24" width="30">
+                P4-DIW
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarsExample04">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Lorem</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Ipsum</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Dolor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="registro.html" tabindex="-1"
-                                aria-disabled="true">Registro</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Lorem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ipsum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Dolor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="registro.html" tabindex="-1" aria-disabled="true">Registro</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
     <!-- Formulario -->
     <div class="container-xl">
@@ -117,15 +115,56 @@
             </div>
         </form>
     </div>
-    <div class="alert alert-success alert-danger" role="alert" id="pedri"></div>
     <script>
-        
-    </script>    
+        $(document).ready(function () {
+            $("#registrationForm").on("submit", function (event) {
+                event.preventDefault(); 
+                var formData = $(this).serialize(); 
+
+                $.ajax({
+                    type: "GET",
+                    url: "registro.json", 
+                    data: formData,
+                    dataType: "json",
+                    success: function (response) {
+                        var alertPlaceholder = $("#alertPlaceholder");
+                        alertPlaceholder.empty(); 
+
+                        var alertClass = response.error === 0 ? "alert-success" : "alert-danger";
+                        var alertMessage = response.error === 0 ? "Registro completado con éxito." : response.mensaje_error;
+
+                        var alertHTML000000 = `
+                            <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
+                                ${alertMessage}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        `;
+
+                        alertPlaceholder.append(alertHTML);
+                    },
+                    error: function () {
+                        var alertPlaceholder = $("#alertPlaceholder");
+                        alertPlaceholder.empty();
+
+                        var alertHTML = `
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                Hubo un error al enviar el formulario. Inténtalo de nuevo más tarde.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        `;
+
+                        alertPlaceholder.append(alertHTML);
+                    }
+                });
+            });
+        });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     </script>
-    <script
-        position-fixedposition-fixedposition-fixedposition-fixedposition-fixedipt src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    <script position-fixedposition-fixedposition-fixedposition-fixedposition-fixedipt
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 
