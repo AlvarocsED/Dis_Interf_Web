@@ -114,52 +114,8 @@
                 <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
             </div>
         </form>
+        <div id="alerta" class="alert d-none mt-3" role="alert"></div>
     </div>
-    <script>
-        $(document).ready(function () {
-            $("#registrationForm").on("submit", function (event) {
-                event.preventDefault(); 
-                var formData = $(this).serialize(); 
-
-                $.ajax({
-                    type: "GET",
-                    url: "registro.json", 
-                    data: formData,
-                    dataType: "json",
-                    success: function (response) {
-                        var alertPlaceholder = $("#alertPlaceholder");
-                        alertPlaceholder.empty(); 
-
-                        var alertClass = response.error === 0 ? "alert-success" : "alert-danger";
-                        var alertMessage = response.error === 0 ? "Registro completado con éxito." : response.mensaje_error;
-
-                        var alertHTML000000 = `
-                            <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
-                                ${alertMessage}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        `;
-
-                        alertPlaceholder.append(alertHTML);
-                    },
-                    error: function () {
-                        var alertPlaceholder = $("#alertPlaceholder");
-                        alertPlaceholder.empty();
-
-                        var alertHTML = `
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                Hubo un error al enviar el formulario. Inténtalo de nuevo más tarde.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        `;
-
-                        alertPlaceholder.append(alertHTML);
-                    }
-                });
-            });
-        });
-    </script>
-
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     </script>
@@ -171,6 +127,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#registroForm').on('submit', function(event) {
+                    event.preventDefault();
+                    $.ajax({
+                        url: 'registro.json',
+                        method: 'POST',
+                        data: {
+                            nombre: $('#nombre').val(),
+                            apellido: $('#apellido').val(),
+                            email: $('#email').val(),
+                            username: $('#username').val(),
+                            password: $('#password').val(),
+                            confirmPassword: $('#confirmPassword').val()
+                        },
+                        success: function(response) {
+                            if (response.error === 0) {
+                                $('#alerta').removeClass('d-none alert-danger').addClass('alert-success').text('Registro exitoso.');
+                            } else {
+                                $('#alerta').removeClass('d-none alert-success').addClass('alert-danger').text(response.mensaje_error);
+                            }
+                        },
+                        error: function() {
+                            $('#alerta').removeClass('d-none alert-success').addClass('alert-danger').text('Error en el registro.');
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
 
 </html>
