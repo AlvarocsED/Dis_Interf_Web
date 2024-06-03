@@ -53,7 +53,7 @@
         </div>
         <br>
         <br>
-        <form action="registro.html" class="row g-3 bg-info">
+        <form action="registro.html" class="row g-3 bg-info" method="get">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="form-floating">
                     <input type="text" class="form-control" id="nombre" placeholder="">
@@ -114,7 +114,7 @@
                 <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
             </div>
         </form>
-        <div id="alerta" class="alert d-none mt-3" role="alert"></div>
+        <div id="alerta" class="alert d-none mt-3 alert-danger alert-success" role="alert"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -133,7 +133,7 @@
                     event.preventDefault();
                     $.ajax({
                         url: 'registro.json',
-                        method: 'POST',
+                        method: 'GET',
                         data: {
                             nombre: $('#nombre').val(),
                             apellido: $('#apellido').val(),
